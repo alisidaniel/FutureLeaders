@@ -240,6 +240,17 @@
     .quote{
       margin-top: 1.5rem;
     }
+    .changefont{
+      font-size: 1rem;
+      padding-top: 6rem;
+    }
+    .changefont1{
+      font-size: 1rem;
+      padding-top: 6rem;
+    }
+    .yy{
+      font-size: 0.7rem;
+    }
   }
   
   /* 
@@ -250,7 +261,7 @@
   @media (min-width: 481px) and (max-width: 767px) {
     
     .view{
-        height: none;
+        height: 30vh;
     }
     .forgetpass{
         margin-top:-39px; 
@@ -258,6 +269,17 @@
     }
      .quote{
       margin-top: 1.5rem;
+    }
+    .changefont{
+      font-size: 1rem;
+      padding-top: 4rem;
+    }
+    .changefont1{
+      font-size: 1rem;
+      padding-top: 6rem;
+    }
+    .yy{
+      font-size: 0.7rem;
     }
   }
   
@@ -269,12 +291,48 @@
   @media (min-width: 320px) and (max-width: 480px) {
     
     .view{
-        height: 31vh;
+        height: 30vh;
     }
     .forgetpass{
         margin-top:-39px;
         margin-left:7rem;
     }
+     .changefont{
+      font-size: 1rem;
+      padding-top: 4rem;
+    }
+    .changefont1{
+      font-size: 1rem;
+      padding-top: 6rem;
+    }
+    .yy{
+      font-size: 0.7rem;
+    }
+
+  }
+
+  @media (min-width: 200px) and (max-width: 319px) {
+
+
+    .view{
+        height: 30vh;
+    }
+    .forgetpass{
+        margin-top:-39px;
+        margin-left:7rem;
+    }
+     .changefont{
+      font-size: 1rem;
+      padding-top: 4rem;
+    }
+    .changefont1{
+      font-size: 1rem;
+      padding-top: 6rem;
+    }
+    .yy{
+      font-size: 0.7rem;
+    }
+
   }
 
 .text-extra-large { font-size:18px !important; line-height:28px;  }
@@ -1274,7 +1332,7 @@ div.box {
 
 @media screen and (max-width: 400px) {
   button {
-    width: 83px;
+    /*width: 83px;*/
     margin: 0 11px 10px 0;
   }
 

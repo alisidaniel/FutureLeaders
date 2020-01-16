@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>  @yield('title') | {{ config('FutureLeaders', 'Prodigy') }}</title>
+    <meta name="csrf-token" content="">
+    <title> FutureLeaders | Home</title>
     <!-- Bootstrap CSS -->
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
@@ -374,7 +374,7 @@
               <div class="card-body">
                 <h5 class="card-title">Our Vision</h5>
                 <p class="card-text">To help under privileged students in public/government owned secondary schools build and develop better inter-personal and leadership qualities.</p>
-                <a href="{{route('about')}}" class="readmore">Read more </a>
+                <a href="about.html" class="readmore">Read more </a>
               </div>
             </div>
           </div>
@@ -385,7 +385,7 @@
               <div class="card-body">
                 <h5 class="card-title">Our Mission</h5>
                 <p class="card-text">The mission of the Future Leaders Foundation is to create educational, leadership and career opportunities for under-privileged secondary school students in our communities through relationships with a volunteer mentor.</p>
-                <a href="{{route('about')}}" class="readmore">Read more </a>
+                <a href="about.html" class="readmore">Read more </a>
               </div>
             </div>
           </div>
@@ -484,7 +484,7 @@
                     <p><b>Future Leaders Foundation</b> <i>Mentoring Program, mentors senior secondary</i>school students on the path to success.  The success of a mentoring relationship depends in great part upon the contribution made by the mentee and mentor.</p>
                     <p>Through the <b>Future Leaders Foundation</b> <i>Mentoring Program,</i> our teenagers/scholars will be able to create a focused personal, academic and career-related plan for their future.</p>
                 </div>
-                <a class="btn-large btn bg-greenish-blue sm-no-margin-bottom btn-circle text-white inner-link" href="{{route('register')}}"><span class="tz-text">Contribute Here </span> </a>
+                <a class="btn-large btn bg-greenish-blue sm-no-margin-bottom btn-circle text-white inner-link" ><span class="tz-text" data-toggle="modal" data-target="#basicExampleModal">Contribute Here </span> </a>
             </div>
         </div>
     </div>
@@ -644,6 +644,42 @@
       </div>
     </section>
 
+  
+  <!-- Modal -->
+    <div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Make Payment</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+              <form >
+                <script src="https://js.paystack.co/v1/inline.js"></script>
+                <div>
+                  <label for="email">Email:</label>
+                  <input class="form-control" type="email" name="email" id="email" placeholder="Enter Your Email" required>
+                </div>
+                <div>
+                  <label for="amount">Amount:</label>
+                  <input class="form-control" type="number" name="amount" id="amount" placeholder="Amount" required>
+                </div>
+                <div class="mt-2">
+                   <button class="btn btn-primary" type="button" onclick="payWithPaystack()"> Pay </button> 
+                </div>
+              </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <!--   <button type="button" class="btn btn-primary">Save changes</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
   </main>
   
   <!--==========================
@@ -656,7 +692,10 @@
 
           <div class="col-lg-4 col-md-6 footer-info">
             <h6>Powered By:</h6>
-            <p><b> Prodigy</b> Projects</p>
+            <p class="pb-3"><b> Prodigy</b> Projects</p>
+            
+            <img src="img/images/paystack.png" alt="thumbnail" class="img" style="width: 70px">
+            <p>Paystack Secured Payment</p>
           </div>
 
           <div class="col-lg-2 col-md-6 footer-links">
@@ -772,6 +811,33 @@
       }
     });
 // });
+
+  function payWithPaystack(){
+    var handler = PaystackPop.setup({
+      key: 'pk_test_5fafc33dae645b70e203e5b65c3a6b15c2deeb05',
+      email: $("#email").val(),
+      amount: $("#amount").val() * 100,
+      currency: "NGN",
+      ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
+      metadata: {
+         custom_fields: [
+            {
+                display_name: "Mobile Number",
+                variable_name: "mobile_number",
+                value: "+2348012345678"
+            }
+         ]
+      },
+      callback: function(response){
+          alert('success. transaction ref is ' + response.reference);
+          $('#basicExampleModal').modal('hide');
+      },
+      onClose: function(){
+          alert('window closed');
+      }
+    });
+    handler.openIframe();
+  }
 </script>
 </body>
 </html>
