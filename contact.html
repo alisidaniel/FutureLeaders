@@ -32,104 +32,84 @@
 
       <div class="logo float-left">
         <!-- Uncomment below if you prefer to use an image logo -->
-        <h6 class="text-light"><a href="index.php"><span>Future Leaders Foundation</span></a></h6>
+        <h6 class="text-light"><a href="index.html"><span>Future Leaders Foundation</span></a></h6>
         <!-- <a href="{{ route('index') }}" class="scrollto"><i class="fab fa-asymmetrik"></i></a> -->
       </div>
 
       <nav class="main-nav float-right d-none d-lg-block">
         <ul>
-          <li class="active"><a href="index.php">Home</a></li>
-          <li><a href="about.php">About Us</a></li>
-          <li><a href="contact.php">Contact Us</a></li>
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </nav><!-- .main-nav -->
     </div>
   </header><!-- #header -->
 
   <main>
+     <section id="contact" style="margin-top: 35px;">
+      <div class="container-fluid">
 
-    <section class="" id="about"  style="margin-top: 35px;">
-
-      <div class="container">
-
-
-        <header class="section-header">
-          <h3>About Us</h3>
-          <p>The Future Leaders Foundation is powered by Prodigy Project Nigeria Limited and Port Harcourt Business Awards Organization, and is setup exclusively for educational and charitable purpose.</p>
-        </header>
-
-        <div class="row about-container">
-
-          <div class="col-lg-6 content order-lg-1 order-2">
-            <p>The Foundation primarily is engaged in providing resources and support to teenagers in public/government owned secondary schools who are underprivileged and from under-resourced communities within Rivers State, Nigeria.
-            </p>
-
-            <p>The Future Leaders Foundation challenges the students to focus on their school work, become better prepared to attend unversity and making a positive impact as professional and community leaders. Our students come from a variety of academic and cultural backgrounds, and what they have in common is a desire to succeed.
-            </p>
-
-            <p>The Future Leaders Foundation provides the necessary resources, support and programs to ensure these underprivileged teenagers can access educational and vocational programs essentials to Leadership.
-            </p>
-
-          </div>
-
-          <div class="col-lg-6 background order-lg-2 order-1 wow fadeInUp">
-
-            <div class="card text-white bg-info">
-              <div class="card-header">
-                <b> Future Leaders Foundation</b>
-              </div>
-              <div class="card-body">
-                <blockquote class="blockquote mb-0">
-                  <p>Does not discriminate on the basis of religion, color, national origin, sex, disability age, height, weight, maritial status or family status in its</p>
-                  <footer class="blockquote-footer text-white">programs, <cite title="Source Title">activities or engagement.</cite></footer>
-                </blockquote>
-              </div>
-            </div>
-                  
-          </div>
+        <div class="section-header">
+          <h3>Contact Us</h3>
         </div>
-      </div>
-    </section>
 
-     <section id="testimonials" class="section-bg">
-      <div class="container">
-
-        <header class="section-header">
-          <h3>Founder</h3>
-        </header>
-
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-
-            <div class="owl-carousel testimonials-carousel wow fadeInUp">
+        <div class="row wow fadeInUp">
     
-              <div class="testimonial-item">
-                <img src="img/testimonial-1.jpg" class="testimonial-img" alt="">
-                <h3>Mr. Wariboko Adonye Tonye</h3>
-                <h4>Founder</h4>
-                <p>
-                  A renowed media entrepreneur after studying youths from most government/public secondary schools.
-                </p>
-              </div>
+          <div class="col-lg-6">
+            <div class="map mb-4 mb-lg-0">
+              <iframe  src="https://maps.google.com/maps?q=16%20Ebony%20Road%2C%20Orazi%20Port%20Harcour&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" style="border:0; width: 100%; height: 312px;" allowfullscreen></iframe>
 
             </div>
-
           </div>
+
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-md-5 info">
+                <i class="ion-ios-location-outline"></i>
+                <p>#16 Ebony Road, Orazi Port Harcourt.</p>
+              </div>
+              <div class="col-md-4 info">
+                <i class="ion-ios-email-outline"></i>
+                <p>info@thefutureleadersfoundation.org</p>
+              </div>
+              <div class="col-md-3 info">
+                <i class="ion-ios-telephone-outline"></i>
+                <p>+234 8037 097 747</p>
+              </div>
+            </div>
+
+            <div class="form">
+              <div id="sendmessage">Your message has been sent. Thank you!</div>
+              <div id="errormessage"></div>
+              <form action="#"  role="form" class="contactForm">
+                <div class="form-row">
+                  <div class="form-group col-lg-6">
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                    <div class="validation"></div>
+                  </div>
+                  <div class="form-group col-lg-6">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                    <div class="validation"></div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                  <div class="validation"></div>
+                </div>
+                <div class="text-center"><button type="submit" title="Send Message">Send Message</button></div>
+              </form>
+            </div>
+          </div>
+
         </div>
 
-
       </div>
-    </section>
-<!-- #testimonials -->
-<section>
-  <div class="">
-      <div class="col-lg-12">
-          <div class="map">
-            <iframe  src="https://maps.google.com/maps?q=16%20Ebony%20Road%2C%20Orazi%20Port%20Harcour&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" style="border:0; width: 100%; height: 312px;" allowfullscreen></iframe>
-        </div>
-      </div>
-  </div>
-</section>
+    </section><!-- #contact -->
 
   </main>
   
@@ -149,9 +129,9 @@
           <div class="col-lg-2 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><a href="{{route('index')}}">Home</a></li>
-              <li><a href="{{route('about')}}">About us</a></li>
-              <li><a href="{{route('contact')}}">contact</a></li>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About us</a></li>
+              <li><a href="contact.html">contact</a></li>
             </ul>
           </div>
 
