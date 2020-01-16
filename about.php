@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <title>  @yield('title') | {{ config('FutureLeaders', 'Prodigy') }}</title>
+    <!-- Bootstrap CSS -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/animate/animate.min.css" rel="stylesheet">
+    <link href="css/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="css/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="css/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.7.3/dist/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
+    
+  </head>
+  <body>
+   <!--==========================
+  Header
+  ============================-->
+  <header id="header" class="fixed-top">
+    <div class="container">
+
+      <div class="logo float-left">
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <h6 class="text-light"><a href="index.php"><span>Future Leaders Foundation</span></a></h6>
+        <!-- <a href="{{ route('index') }}" class="scrollto"><i class="fab fa-asymmetrik"></i></a> -->
+      </div>
+
+      <nav class="main-nav float-right d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="index.php">Home</a></li>
+          <li><a href="about.php">About Us</a></li>
+          <li><a href="contact.php">Contact Us</a></li>
+        </ul>
+      </nav><!-- .main-nav -->
+    </div>
+  </header><!-- #header -->
+
+  <main>
+
+    <section class="" id="about"  style="margin-top: 35px;">
+
+      <div class="container">
+
+
+        <header class="section-header">
+          <h3>About Us</h3>
+          <p>The Future Leaders Foundation is powered by Prodigy Project Nigeria Limited and Port Harcourt Business Awards Organization, and is setup exclusively for educational and charitable purpose.</p>
+        </header>
+
+        <div class="row about-container">
+
+          <div class="col-lg-6 content order-lg-1 order-2">
+            <p>The Foundation primarily is engaged in providing resources and support to teenagers in public/government owned secondary schools who are underprivileged and from under-resourced communities within Rivers State, Nigeria.
+            </p>
+
+            <p>The Future Leaders Foundation challenges the students to focus on their school work, become better prepared to attend unversity and making a positive impact as professional and community leaders. Our students come from a variety of academic and cultural backgrounds, and what they have in common is a desire to succeed.
+            </p>
+
+            <p>The Future Leaders Foundation provides the necessary resources, support and programs to ensure these underprivileged teenagers can access educational and vocational programs essentials to Leadership.
+            </p>
+
+          </div>
+
+          <div class="col-lg-6 background order-lg-2 order-1 wow fadeInUp">
+
+            <div class="card text-white bg-info">
+              <div class="card-header">
+                <b> Future Leaders Foundation</b>
+              </div>
+              <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                  <p>Does not discriminate on the basis of religion, color, national origin, sex, disability age, height, weight, maritial status or family status in its</p>
+                  <footer class="blockquote-footer text-white">programs, <cite title="Source Title">activities or engagement.</cite></footer>
+                </blockquote>
+              </div>
+            </div>
+                  
+          </div>
+        </div>
+      </div>
+    </section>
+
+     <section id="testimonials" class="section-bg">
+      <div class="container">
+
+        <header class="section-header">
+          <h3>Founder</h3>
+        </header>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+
+            <div class="owl-carousel testimonials-carousel wow fadeInUp">
+    
+              <div class="testimonial-item">
+                <img src="img/testimonial-1.jpg" class="testimonial-img" alt="">
+                <h3>Mr. Wariboko Adonye Tonye</h3>
+                <h4>Founder</h4>
+                <p>
+                  A renowed media entrepreneur after studying youths from most government/public secondary schools.
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+<!-- #testimonials -->
+<section>
+  <div class="">
+      <div class="col-lg-12">
+          <div class="map">
+            <iframe  src="https://maps.google.com/maps?q=16%20Ebony%20Road%2C%20Orazi%20Port%20Harcour&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" style="border:0; width: 100%; height: 312px;" allowfullscreen></iframe>
+        </div>
+      </div>
+  </div>
+</section>
+
+  </main>
+  
+  <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer" style="padding: 0 0 30px 0; color: #eee; font-size: 14px; background: #00428a;">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6 footer-info">
+            <h6>Powered By:</h6>
+            <p><b> Prodigy</b> Projects</p>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><a href="{{route('index')}}">Home</a></li>
+              <li><a href="{{route('about')}}">About us</a></li>
+              <li><a href="{{route('contact')}}">contact</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              #16 Ebony Road, Orazi<br>
+              Port Harcourt,<br>
+              Nigeria. <br>
+              <strong>Tel:</strong> +234 8037 097 747<br>
+              <strong>Email:</strong> info@thefutureleadersfoundation.org<br>
+            </p>
+
+            <div class="social-links">
+              <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="fab fa-google-plus"></i></a>
+              <a href="#" class="linkedin"><i class="fab fa-linkedin"></i></a>
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-newsletter">
+            <h4>Our Newsletter</h4>
+            <p>Welcome</p>
+            <form action="#">
+              <input type="email" name="email"><input type="submit"  value="Subscribe">
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        Copyright  &copy; 2020 <strong>Future </strong>Leaders Foundation
+      </div>
+      <div class="credits">
+         All rights reserved
+      </div>
+    </div>
+  </footer>
+  <!-- #footer -->
+<!-- Alisi Daniel developer -->
+<a href="#" class="back-to-top"><i class="fas fa-angle-up"></i></a>
+  <script src="js/jquery/jquery.min.js"></script>
+  <script src="js/jquery/jquery-migrate.min.js"></script>
+  <script src="js/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="js/easing/easing.min.js"></script>
+  <script src="js/mobile-nav/mobile-nav.js"></script>
+  <script src="js/wow/wow.min.js"></script>
+  <script src="js/waypoints/waypoints.min.js"></script>
+  <script src="js/counterup/counterup.min.js"></script>
+  <script src="js/owlcarousel/owl.carousel.min.js"></script>
+  <script src="js/isotope/isotope.pkgd.min.js"></script>
+  <script src="js/lightbox/js/lightbox.min.js"></script>
+  <script src="js/main.js"></script>
+  <script type="text/javascript">
+// $(function() {
+
+    var ctxP = document.getElementById("labelChart").getContext('2d');
+    var myPieChart = new Chart(ctxP, {
+      plugins: [ChartDataLabels],
+      type: 'pie',
+      data: {
+        labels: ["Self-Management", "Self-Awareness", "Social Awareness", "Relationship Skills", "Responsible Decision Making"],
+        datasets: [{
+          data: [1000, 1000, 1000, 1000, 1000],
+          backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360"],
+          hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774"]
+        }]
+      },
+      options: {
+        responsive: true,
+        legend: {
+          position: 'right',
+          labels: {
+            padding: 20,
+            boxWidth: 10
+          }
+        },
+        plugins: {
+          datalabels: {
+            formatter: (value, ctx) => {
+              let sum = 0;
+              let dataArr = ctx.chart.data.datasets[0].data;
+              dataArr.map(data => {
+                sum += data;
+              });
+              let percentage = (value * 100 / sum).toFixed(2) + "%";
+              return percentage;
+            },
+            color: 'white',
+            labels: {
+              title: {
+                font: {
+                  size: '16'
+                }
+              }
+            }
+          }
+        }
+      }
+    });
+// });
+</script>
+</body>
+</html>
